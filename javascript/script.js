@@ -1,6 +1,6 @@
 //anonymous function
 let anonymous = function() {
-  console.log("this is an anonymous function")
+  console.log("this is an anonymous function");
 };
 anonymous();
    
