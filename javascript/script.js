@@ -1,3 +1,14 @@
+//anonymous function
+let anonymous = function() {
+  console.log("this is an anonymous function")
+};
+anonymous();
+   
+// var variable operations
+var x = 20;
+var y = 30;
+var result = x * y + x;
+console.log(result); // 620 result output in console
 
 // const variables
 const ogHeading = "Test page for JavaScript";
@@ -7,7 +18,7 @@ const newParagraph = "This is a new paragraph";
 const newButtonText = "Change the heading and paragraph";
 
 // function to change and add text
-function forWater() {
+function forWater() { // named function
   //let variables
   let paragraphChange = document.getElementById("carrot");
   let headingChange = document.getElementById("banana");
