@@ -1,5 +1,5 @@
 class BankAccount {
-    constructor(accountNumber, accountHolder, balance = 0) {
+    constructor(accountNumber, accountHolder, balance) {
         this.accountNumber = accountNumber;
         this.accountHolder = accountHolder;
         this.balance = balance;
@@ -10,7 +10,7 @@ class BankAccount {
             
         } else {
            this.balance += sum;
-           console.log(this.accountHolder + " has deposited: " + sum + " pounds." + " Current balance: " + this.balance + " pounds"); 
+           console.log(this.accountHolder + " has deposited: £" + sum + " Current balance: £" + this.balance); 
         };
     }
     withdraw(sum) {
@@ -18,11 +18,29 @@ class BankAccount {
             console.log("Not enough funds. " + this.accountHolder + " Current balance: " + this.balance);
         } else {
             this.balance -= sum;
-            console.log(sum + " pounds have been taken. " + this.accountHolder + " Current balance: " + this.balance);
+            console.log(sum + " pounds have been taken. " + this.accountHolder + " Current balance: £" + this.balance);
         }
     }
     checkBalance() {
-        console.log("This is " + this.accountHolder + " current balance: " + this.balance);
+        console.log("This is " + this.accountHolder + " current balance: £" + this.balance);
+    }
+    transfer(sum, anotherAccount) { 
+        if (this.accountHolder === anotherAccount.accountHolder) {
+            console.log("You can not transfer to yourself. Please choose a valid account");
+
+        } else if (sum <= 0) {
+            console.log("Please add a positive sum greater than 0.");
+
+        } else if (sum > this.balance) {
+            console.log("Not enough funds. " + this.accountHolder + " Current balance: £" + this.balance);
+
+        } else {
+            this.balance -= sum;
+            anotherAccount.balance += sum;
+            console.log(this.accountHolder + " has transferred: £" + sum + " to " + anotherAccount.accountHolder + 
+                ". " + anotherAccount.accountHolder + " current is balance: £" + anotherAccount.balance);
+        }
+      
     }
 }
 
