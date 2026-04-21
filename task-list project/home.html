@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-List</title>
+</head>
+<style>
+body { text-align: center;}
+button {cursor: pointer;}
+ul{list-style-type: none}
+input[type="checkbox"]{height: 1rem;width: 1rem;}
+li{display: flex;justify-content: center;align-items: center;}
+</style>
+<body>
+    <h1>Task List</h1>
+    <label for="taskinput" >Add your tasks</label>
+    <input type="text" id="taskinput" name="taskinput" placeholder="Clean your room">
+    <button onclick="addTask()" id="inputbtn">add</button>
+    <ul id="taskOutput"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
