@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<style>
+body { text-align: center;}
+button {cursor: pointer;}
+ul{list-style-type: none}
+input[type="checkbox"]{height: 1rem;width: 1rem;}
+li{display: flex;justify-content: center;align-items: center;}
+</style>
+<body>
+    <h1>Arrays</h1>
+    <p>
+        You can add items to the end of the array with "Enter" 
+        key and remove the last with item with "Backspace" key if the input field is empty. 
+    </p>
+    <label for="arrayinput" >Add array items</label>
+    <input type="text" id="arrayinput" name="arrayinput" placeholder="Type here">
+    <button onclick="pushItemFirst()">Add First</button>
+    <button onclick="pushItemEnd()">Add End</button>
+    <button onclick="removeFirst()">Remove First</button>
+    <button onclick="removeLast()">Remove Last</button>
+    <ul id="arrayOutput"></ul>
+</body>
+<script src="script.js"></script>
+</html>
